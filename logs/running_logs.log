@@ -63,3 +63,36 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestio
 [2024-04-19 14:12:57,325: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
 
 x==========x]
+[2024-04-19 14:38:48,071: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-19 14:38:48,128: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-19 14:38:48,142: INFO: common: created directory at: artifacts]
+[2024-04-19 14:38:48,171: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-04-19 14:38:50,957: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-04-19 14:50:50,350: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-04-19 14:50:50,356: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-19 14:50:50,360: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-19 14:50:50,361: INFO: common: created directory at: artifacts]
+[2024-04-19 14:50:50,363: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-04-19 14:50:50,363: INFO: data_ingestion: Downloading data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-19 14:50:51,237: INFO: data_ingestion: Downloaded data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-19 14:50:51,264: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "main.py", line 10, in <module>
+    obj.main()
+  File "D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.extract_zip_file()
+  File "D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\src\cnnClassifier\components\data_ingestion.py", line 44, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Hp\anaconda3\envs\kidney\lib\zipfile.py", line 1216, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2024-04-19 14:51:44,566: INFO: main: *******************]
+[2024-04-19 14:51:44,568: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-04-19 14:51:44,578: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-19 14:51:44,584: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-19 14:51:44,585: INFO: common: created directory at: artifacts]
+[2024-04-19 14:51:44,612: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-04-19 14:51:45,834: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-04-19 14:51:48,274: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
