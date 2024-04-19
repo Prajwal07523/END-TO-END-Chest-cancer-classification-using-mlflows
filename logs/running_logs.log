@@ -96,3 +96,26 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestio
 [2024-04-19 14:51:48,274: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
 
 x==========x]
+[2024-04-19 15:03:33,847: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-19 15:03:33,882: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-19 15:03:33,887: INFO: common: created directory at: artifacts]
+[2024-04-19 15:03:33,904: INFO: common: created directory at: artifacts\training]
+[2024-04-19 15:12:16,362: INFO: main: *******************]
+[2024-04-19 15:12:16,382: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-04-19 15:12:16,390: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-19 15:12:16,400: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-19 15:12:16,412: INFO: common: created directory at: artifacts]
+[2024-04-19 15:12:16,426: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-04-19 15:12:17,567: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-04-19 15:12:18,856: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-04-19 15:12:18,857: INFO: main: *******************]
+[2024-04-19 15:12:18,857: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-04-19 15:12:18,863: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-19 15:12:18,868: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-19 15:12:18,869: INFO: common: created directory at: artifacts]
+[2024-04-19 15:12:18,870: INFO: common: created directory at: artifacts\training]
+[2024-04-19 15:14:15,026: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
