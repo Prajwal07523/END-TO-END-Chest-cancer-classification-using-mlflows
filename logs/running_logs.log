@@ -280,3 +280,236 @@ Traceback (most recent call last):
     raise IOError(
 OSError: No file or directory found at model\model.h5
 [2024-04-20 00:21:41,545: INFO: _internal: 127.0.0.1 - - [20/Apr/2024 00:21:41] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-04-20 00:24:29,272: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.7.2.145:8000]
+[2024-04-20 00:24:29,273: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-04-20 00:24:38,896: INFO: _internal: 127.0.0.1 - - [20/Apr/2024 00:24:38] "GET / HTTP/1.1" 200 -]
+[2024-04-20 00:24:47,926: INFO: _internal: 127.0.0.1 - - [20/Apr/2024 00:24:47] "POST /predict HTTP/1.1" 200 -]
+[2024-04-20 00:25:08,382: INFO: _internal: 127.0.0.1 - - [20/Apr/2024 00:25:08] "POST /predict HTTP/1.1" 200 -]
+[2024-04-20 00:25:12,939: INFO: _internal: 127.0.0.1 - - [20/Apr/2024 00:25:12] "POST /predict HTTP/1.1" 200 -]
+[2024-04-20 00:25:24,360: INFO: _internal: 127.0.0.1 - - [20/Apr/2024 00:25:24] "POST /predict HTTP/1.1" 200 -]
+[2024-04-20 00:25:31,906: INFO: _internal: 127.0.0.1 - - [20/Apr/2024 00:25:31] "GET / HTTP/1.1" 200 -]
+[2024-04-20 00:25:46,343: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001D0DB5EF280> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-04-20 00:25:46,350: INFO: _internal: 127.0.0.1 - - [20/Apr/2024 00:25:46] "POST /predict HTTP/1.1" 200 -]
+[2024-04-20 00:25:59,555: WARNING: polymorphic_function: 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001D0DCEAC940> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-04-20 00:25:59,564: INFO: _internal: 127.0.0.1 - - [20/Apr/2024 00:25:59] "POST /predict HTTP/1.1" 200 -]
+[2024-04-22 12:55:17,522: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-04-22 12:55:17,527: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 12:55:17,536: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 12:55:17,537: INFO: common: created directory at: artifacts]
+[2024-04-22 12:55:17,538: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-04-22 12:55:17,540: INFO: data_ingestion: Downloading data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 12:55:18,153: INFO: data_ingestion: Downloaded data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 12:55:18,155: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    obj.main()
+  File "D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.extract_zip_file()
+  File "D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\src\cnnClassifier\components\data_ingestion.py", line 44, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Hp\anaconda3\envs\kidney\lib\zipfile.py", line 1216, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2024-04-22 12:57:06,746: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-04-22 12:57:06,791: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 12:57:06,796: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 12:57:06,797: INFO: common: created directory at: artifacts]
+[2024-04-22 12:57:06,798: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-04-22 12:57:06,798: INFO: data_ingestion: Downloading data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 12:57:07,232: INFO: data_ingestion: Downloaded data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 12:57:08,908: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2024-04-22 12:57:08,910: INFO: main: *******************]
+[2024-04-22 12:57:08,910: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-04-22 12:57:08,916: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 12:57:08,918: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 12:57:08,919: INFO: common: created directory at: artifacts]
+[2024-04-22 12:57:08,920: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-04-22 12:57:10,306: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-04-22 12:57:12,022: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-04-22 12:57:12,023: INFO: main: *******************]
+[2024-04-22 12:57:12,023: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-04-22 12:57:12,029: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 12:57:12,034: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 12:57:12,133: INFO: common: created directory at: artifacts]
+[2024-04-22 12:57:12,134: INFO: common: created directory at: artifacts\training]
+[2024-04-22 12:57:13,501: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\Chest-CT-Scan-data']
+Traceback (most recent call last):
+  File "main.py", line 36, in <module>
+    model_trainer.main()
+  File "D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\src\cnnClassifier\pipeline\stage_03_model_trainer.py", line 20, in main
+    training.train_valid_generator()
+  File "d:\data science\mlops\end-to-end-chest-cancer-classification-using-mlflows\src\cnnClassifier\components\model_trainer.py", line 38, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\Hp\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\Hp\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\Chest-CT-Scan-data'
+[2024-04-22 12:58:21,960: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-04-22 12:58:22,007: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 12:58:22,013: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 12:58:22,015: INFO: common: created directory at: artifacts]
+[2024-04-22 12:58:22,015: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-04-22 12:58:22,016: INFO: data_ingestion: Downloading data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 12:58:22,475: INFO: data_ingestion: Downloaded data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 12:58:24,338: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2024-04-22 12:58:24,338: INFO: main: *******************]
+[2024-04-22 12:58:24,338: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-04-22 12:58:24,347: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 12:58:24,353: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 12:58:24,355: INFO: common: created directory at: artifacts]
+[2024-04-22 12:58:24,356: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-04-22 12:58:25,743: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-04-22 12:58:28,465: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-04-22 12:58:28,465: INFO: main: *******************]
+[2024-04-22 12:58:28,467: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-04-22 12:58:28,474: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 12:58:28,480: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 12:58:28,482: INFO: common: created directory at: artifacts]
+[2024-04-22 12:58:28,483: INFO: common: created directory at: artifacts\training]
+[2024-04-22 13:00:37,483: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-04-22 13:00:37,490: INFO: main: *******************]
+[2024-04-22 13:00:37,490: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-04-22 13:00:37,523: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 13:00:37,536: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 13:00:37,540: INFO: common: created directory at: artifacts]
+[2024-04-22 13:01:21,040: INFO: common: json file saved at: scores.json]
+[2024-04-22 13:01:21,046: INFO: common: json file saved at: scores.json]
+[2024-04-22 13:01:30,790: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-04-22 13:01:33,619: INFO: builder_impl: Assets written to: C:\Users\Hp\AppData\Local\Temp\tmpwa8medt7\model\data\model\assets]
+[2024-04-22 13:02:02,420: INFO: dir_util: creating D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\mlruns\0\e16bb6492b274755a6e07d8828fa19e4\artifacts\model\data]
+[2024-04-22 13:02:02,581: INFO: dir_util: creating D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\mlruns\0\e16bb6492b274755a6e07d8828fa19e4\artifacts\model\data\model]
+[2024-04-22 13:02:02,584: INFO: dir_util: creating D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\mlruns\0\e16bb6492b274755a6e07d8828fa19e4\artifacts\model\data\model\assets]
+[2024-04-22 13:02:02,648: INFO: dir_util: creating D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\mlruns\0\e16bb6492b274755a6e07d8828fa19e4\artifacts\model\data\model\variables]
+[2024-04-22 13:02:02,954: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-04-22 13:11:40,774: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 13:11:40,823: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 13:11:40,825: INFO: common: created directory at: artifacts]
+[2024-04-22 13:12:06,828: INFO: common: json file saved at: scores.json]
+[2024-04-22 13:12:11,942: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-04-22 13:12:13,118: INFO: builder_impl: Assets written to: C:\Users\Hp\AppData\Local\Temp\tmplcaiu8th\model\data\model\assets]
+[2024-04-22 13:24:38,483: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 13:24:38,535: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 13:24:38,537: INFO: common: created directory at: artifacts]
+[2024-04-22 13:25:03,584: INFO: common: json file saved at: scores.json]
+[2024-04-22 13:25:14,905: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-04-22 13:25:16,488: INFO: builder_impl: Assets written to: C:\Users\Hp\AppData\Local\Temp\tmpumlhz_ef\model\data\model\assets]
+[2024-04-22 13:46:01,672: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-04-22 13:46:01,680: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 13:46:01,685: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 13:46:01,686: INFO: common: created directory at: artifacts]
+[2024-04-22 13:46:01,687: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-04-22 13:46:01,688: INFO: data_ingestion: Downloading data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 13:46:02,111: INFO: data_ingestion: Downloaded data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 13:46:04,206: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2024-04-22 13:46:04,208: INFO: main: *******************]
+[2024-04-22 13:46:04,209: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-04-22 13:46:04,213: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 13:46:04,218: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 13:46:04,220: INFO: common: created directory at: artifacts]
+[2024-04-22 13:46:04,221: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-04-22 13:46:05,589: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-04-22 13:46:07,733: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-04-22 13:46:07,734: INFO: main: *******************]
+[2024-04-22 13:46:07,735: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-04-22 13:46:07,740: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 13:46:07,743: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 13:46:07,745: INFO: common: created directory at: artifacts]
+[2024-04-22 13:46:07,763: INFO: common: created directory at: artifacts\training]
+[2024-04-22 13:47:29,046: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-04-22 13:47:29,048: INFO: main: *******************]
+[2024-04-22 13:47:29,048: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-04-22 13:47:29,058: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 13:47:29,061: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 13:47:29,063: INFO: common: created directory at: artifacts]
+[2024-04-22 13:47:59,630: INFO: common: json file saved at: scores.json]
+[2024-04-22 13:47:59,635: INFO: common: json file saved at: scores.json]
+[2024-04-22 13:48:04,651: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-04-22 13:48:05,763: INFO: builder_impl: Assets written to: C:\Users\Hp\AppData\Local\Temp\tmpz_gj8cll\model\data\model\assets]
+[2024-04-22 13:48:16,432: INFO: dir_util: creating D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\mlruns\0\a00404d04b484dd7909a952bde1fdf87\artifacts\model\data]
+[2024-04-22 13:48:16,435: INFO: dir_util: creating D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\mlruns\0\a00404d04b484dd7909a952bde1fdf87\artifacts\model\data\model]
+[2024-04-22 13:48:16,438: INFO: dir_util: creating D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\mlruns\0\a00404d04b484dd7909a952bde1fdf87\artifacts\model\data\model\assets]
+[2024-04-22 13:48:16,449: INFO: dir_util: creating D:\Data science\MLOPS\END-TO-END-Chest-cancer-classification-using-mlflows\mlruns\0\a00404d04b484dd7909a952bde1fdf87\artifacts\model\data\model\variables]
+[2024-04-22 13:48:16,616: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-04-22 14:15:06,713: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-04-22 14:15:06,717: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 14:15:06,722: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 14:15:06,723: INFO: common: created directory at: artifacts]
+[2024-04-22 14:15:06,723: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-04-22 14:15:06,724: INFO: data_ingestion: Downloading data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 14:15:07,161: INFO: data_ingestion: Downloaded data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 14:15:10,605: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2024-04-22 14:16:14,576: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-04-22 14:16:14,582: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 14:16:14,585: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 14:16:14,585: INFO: common: created directory at: artifacts]
+[2024-04-22 14:16:14,586: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-04-22 14:16:14,587: INFO: data_ingestion: Downloading data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 14:16:15,038: INFO: data_ingestion: Downloaded data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 14:16:16,516: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2024-04-22 14:17:11,521: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-04-22 14:17:11,524: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 14:17:11,528: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 14:17:11,528: INFO: common: created directory at: artifacts]
+[2024-04-22 14:17:11,529: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-04-22 14:17:11,529: INFO: data_ingestion: Downloading data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 14:17:11,937: INFO: data_ingestion: Downloaded data from https://drive.google.com/drive/folders/1UlGQtGlo7ygK3Jsal4CXRs-YBXM98Vrs?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-04-22 14:17:13,076: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2024-04-22 14:18:49,988: INFO: stage_02_prepare_base_model: *******************]
+[2024-04-22 14:18:49,989: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-04-22 14:18:49,995: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 14:18:50,006: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 14:18:50,010: INFO: common: created directory at: artifacts]
+[2024-04-22 14:18:50,020: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-04-22 14:18:51,348: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-04-22 14:18:53,395: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-04-22 14:19:08,230: INFO: stage_03_model_trainer: *******************]
+[2024-04-22 14:19:08,230: INFO: stage_03_model_trainer: >>>>>> stage Training started <<<<<<]
+[2024-04-22 14:19:08,235: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 14:19:08,238: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 14:19:08,239: INFO: common: created directory at: artifacts]
+[2024-04-22 14:19:08,239: INFO: common: created directory at: artifacts\training]
+[2024-04-22 14:20:28,303: INFO: stage_03_model_trainer: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-04-22 14:20:40,332: INFO: stage_04_model_evaluation: *******************]
+[2024-04-22 14:20:40,333: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-04-22 14:20:40,339: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-04-22 14:20:40,344: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-04-22 14:20:40,345: INFO: common: created directory at: artifacts]
+[2024-04-22 14:21:05,881: INFO: common: json file saved at: scores.json]
+[2024-04-22 14:21:05,883: INFO: common: json file saved at: scores.json]
+[2024-04-22 14:21:05,884: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
